@@ -15,6 +15,7 @@
 
 # BoardConfig.mk
 # We are working on this file so it may eat your cat
+LOCAL_PATH :=  $(call my-dir)
 
 # CPU
 TARGET_CPU_ABI 				:= armeabi-v7a
@@ -31,3 +32,9 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 # Audio
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 BOARD_USES_ALSA_AUDIO := true
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.qcom
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_RECOVERY_DENSITY := hdpi
