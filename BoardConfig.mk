@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # BoardConfig.mk
-# Under construction
+# We are working on this file so it may eat your cat
 
 # CPU
 TARGET_CPU_ABI 				:= armeabi-v7a
