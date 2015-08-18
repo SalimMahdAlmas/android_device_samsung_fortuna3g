@@ -15,10 +15,15 @@
 
 # BoardConfig.mk
 # Under construction
-#
+
+# CPU
 TARGET_CPU_ABI 				:= armeabi-v7a
 TARGET_CPU_ABI2 			:= armeabi
 TARGET_ARCH 				:= arm
 TARGET_ARCH_VARIANT 			:= armv7-a-neon
 TARGET_ARCH_VARIANT_CPU 		:= cortex-a53
 TARGET_BOARD_PLATFORM 			:= msm8916
+
+# SD
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
