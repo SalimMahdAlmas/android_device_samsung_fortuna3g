@@ -1,4 +1,4 @@
 git init 
 git add . 
-git commit -m "delted unnes file" 
+git commit -m "commit" 
 git push -u origin master
