@@ -1,2 +1,2 @@
 
-Ramdisk files
+Ramdisk files of stock kernel
