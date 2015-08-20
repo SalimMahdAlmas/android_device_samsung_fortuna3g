@@ -32,6 +32,7 @@ BOARD_KERNEL_PAGESIZE 		:= 2048
 BOARD_KERNEL_SEPARATED_DT 	:= true
 BOARD_RAMDISK_OFFSET 		:= 0x01000000
 TARGET_KERNEL_SOURCE 		:= kernel/samsung/fortuna
+# We have'nt add add this because we are manging kernel source
 # TARGET_KERNEL_CONFIG := fortuna3g_defconfig
 
 
