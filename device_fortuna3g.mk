@@ -23,8 +23,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_PACKAGES += \
 	com.android.future.usb.accessory \
 	libnetcmdiface \
-	Stk
-	Stk2
+	Stk \
+	Stk2 \
 	static_busybox \
 	make_ext4fs \
 	setup_fs
