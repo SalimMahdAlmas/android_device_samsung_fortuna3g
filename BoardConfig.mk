@@ -15,7 +15,7 @@
 
 # BoardConfig.mk
 # We are working on this file so it may eat your cat
-LOCAL_PATH :=  $(call my-dir)
+LOCAL_PATH := device/samsung/fortuna3g
 
 # Inherit from samsung qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
