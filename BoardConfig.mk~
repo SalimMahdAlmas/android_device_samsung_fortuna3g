@@ -17,9 +17,6 @@
 # We are working on this file so it may eat your cat
 LOCAL_PATH :=  $(call my-dir)
 
-# Inherit from samsung qcom-common
--include device/samsung/qcom-common/BoardConfigCommon.mk
-
 # CPU
 TARGET_CPU_ABI 				:= armeabi-v7a
 TARGET_CPU_ABI2 			:= armeabi
