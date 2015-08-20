@@ -1,4 +1,5 @@
-Device tree for fortuna3g
-Maintainer: Sahid Almas & Sergey Karbainov
+Device Tree
 
-Under construction
+Maintainer: Sahid Almas 
+&
+Sergey Karbainov
