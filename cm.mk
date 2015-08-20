@@ -16,3 +16,8 @@ PRODUCT_MODEL := SM-G530H
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=samsung/fortunave3gxx/fortunave3g:4.4.4/KTU84P/G530HDCU1AOA2:user/release-keys PRIVATE_BUILD_DESC="fortunave3gxx-user 4.4.4 KTU84P G530HDCU1AOA2 release-keys"
 
 
+# Extra overlay for HDPI
+PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/hdpi
+
+# Release name 
+PRODUCT_RELEASE_NAME := GalaxyGrandPrime
