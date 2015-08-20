@@ -3,6 +3,9 @@
 VENDOR=samsung
 DEVICE=fortuna
 
+
+export VENDOR
+export DEVICE
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 
 echo "Pulling device files..."
