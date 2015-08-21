@@ -19,5 +19,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=samsung/fortunave3gxx/fortunav
 # Extra overlay for HDPI
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/hdpi
 
-# Release name 
-PRODUCT_RELEASE_NAME := GalaxyGrandPrime
