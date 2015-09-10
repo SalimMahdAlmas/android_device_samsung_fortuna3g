@@ -40,7 +40,7 @@ ARCH_ARM_HAVE_NEO				:= true
 ARCH_ARM_HAVE_VFP 				:= true
 ARCH_ARM_HAVE_TLS_REGISTER 			:= true
 
-WITH_DEXPREOPT := true
+WITH_DEXPREOPT 					:= true
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK 			:= $(LOCAL_PATH)/mkbootimg.mk
@@ -54,8 +54,7 @@ TARGET_KERNEL_SOURCE 				:= kernel/samsung/fortuna
 BOARD_BOOTIMAGE_PARTITION_SIZE 			:= 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE 		:= 16777216
 BOARD_FLASH_BLOCK_SIZE 				:= 131072
-# We have'nt add add this because we are manging kernel source
-# TARGET_KERNEL_CONFIG := fortuna3g_defconfig
+TARGET_KERNEL_CONFIG 				:= msm8916_sec_defconfig
 
 
 # SD
