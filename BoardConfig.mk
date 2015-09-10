@@ -17,6 +17,10 @@
 # We are working on this file so it may eat your cat
 LOCAL_PATH := device/samsung/fortuna3g
 
+
+# Inherit from samsung qcom-common
+-include device/samsung/qcom-common/BoardConfigCommon.mk 
+
 # Platform
 TARGET_BOARD_PLATFORM := MSM8216
 TARGET_BOARD_PLATFORM_GPU := Adreno-306
@@ -27,16 +31,11 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # Architecture
-TARGET_ARCH := arm
 TARGET_CPU_VARIANT := cortex-a53
-TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a53
 TARGET_CPU_ABI_LIST := arm64-v8a,armeabi-v7a,armeabi
 TARGET_CPU_ABI_LIST_32_BIT := armeabi-v7a,armeabi
 TARGET_CPU_ABI_LIST_64_BIT := arm64-v8a
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_NEON := true
 ARCH_ARM_HAVE_VFP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
@@ -51,7 +50,6 @@ BOARD_KERNEL_PAGESIZE 		:= 2048
 BOARD_KERNEL_SEPARATED_DT 	:= true
 BOARD_RAMDISK_OFFSET 		:= 0x01000000
 TARGET_KERNEL_SOURCE 		:= kernel/samsung/fortuna
-BOARD_MKBOOTIMG_ARGS 		:= --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_FLASH_BLOCK_SIZE := 131072
