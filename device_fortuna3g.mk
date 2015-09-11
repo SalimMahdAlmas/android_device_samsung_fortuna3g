@@ -12,12 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#Under construction
 LOCAL_PATH := device/samsung/fortuna3g
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# dpi
 PRODUCT_AAPT_CONFIG :=hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_PACKAGES += \
@@ -53,12 +56,25 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.sip.xml:system/etc/permissions/android.software.sip.xml \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+# Ramdisk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/fstab.qcom:root/fstab.qcom
 
+# For userdebug builds
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    ro.debuggable=1 \
+    ro.multisim.simslotcount=2 \
+    persist.radio.multisim.config=dsds \
+    persist.service.adb.enable=1
+    
 $(call inherit-product-if-exists, vendor/samsung/fortuna3g/device_fortuna3g.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
+$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 PRODUCT_NAME := fortuna3g
 PRODUCT_DEVICE := g530h
