@@ -42,7 +42,7 @@ TARGET_ARCH_VARIANT 				:= armv7-a-neon
 TARGET_CPU_VARIANT 				:= cortex-a53
 TARGET_CPU_ABI 					:= armeabi-v7a
 TARGET_CPU_ABI2 				:= armeabi
-ARCH_ARM_HAVE_NEO				:= true
+ARCH_ARM_HAVE_NEON				:= true
 ARCH_ARM_HAVE_VFP 				:= true
 ARCH_ARM_HAVE_TLS_REGISTER 			:= true
 
