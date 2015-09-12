@@ -37,11 +37,11 @@ TARGET_GLOBAL_CPPFLAGS 				+= -mfpu=neon -mfloat-abi=softfp
 COMMON_GLOBAL_CFLAGS 				+= -DNO_SECURE_DISCARD
 
 # Architecture
+TARGET_ARCH 					:= arm
+TARGET_ARCH_VARIANT 				:= armv7-a-neon
 TARGET_CPU_VARIANT 				:= cortex-a53
-TARGET_ARCH_VARIANT_CPU 			:= cortex-a53
-TARGET_CPU_ABI_LIS				:= arm64-v8a,armeabi-v7a,armeabi
-TARGET_CPU_ABI_LIST_32_BIT 			:= armeabi-v7a,armeabi
-TARGET_CPU_ABI_LIST_64_BIT 			:= arm64-v8a
+TARGET_CPU_ABI 					:= armeabi-v7a
+TARGET_CPU_ABI2 				:= armeabi
 ARCH_ARM_HAVE_NEO				:= true
 ARCH_ARM_HAVE_VFP 				:= true
 ARCH_ARM_HAVE_TLS_REGISTER 			:= true
