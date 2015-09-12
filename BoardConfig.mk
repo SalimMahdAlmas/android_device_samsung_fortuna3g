@@ -14,7 +14,6 @@
 # limitations under the License.
 
 # BoardConfig.mk
-# We are working on this file so it may eat your cat
 LOCAL_PATH 					:= device/samsung/fortuna3g
 
 
@@ -25,6 +24,8 @@ LOCAL_PATH 					:= device/samsung/fortuna3g
 BOARD_BOOTIMAGE_PARTITION_SIZE 			:= 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE 		:= 16777216
 BOARD_SYSTEMIMAGE_PARTITION_SIZE 		:= 1568669696
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+
 
 # Platform
 TARGET_BOARD_PLATFORM 				:= MSM8216
