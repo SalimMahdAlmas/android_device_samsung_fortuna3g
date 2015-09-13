@@ -87,6 +87,10 @@ BOARD_CHARGER_DISABLE_INIT_BLANK 		:= true
 BOARD_CHARGER_ENABLE_SUSPEND 			:= true
 BOARD_CHARGER_SHOW_PERCENTAGE 			:= true
 
+#SE Policy
+BOARD_SEPOLICY_DIRS += \
+        device/samsung/fortuna3g
+        
 BOARD_SEPOLICY_UNION += \ 
 	genfs_contexts \ 
 	file_contexts \ 
