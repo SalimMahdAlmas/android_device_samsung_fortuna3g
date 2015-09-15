@@ -68,22 +68,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.multisim.simslotcount=2 \
     persist.radio.multisim.config=dsds \
     persist.service.adb.enable=1
-
-PRODUCT_PACKAGES += \
-    libexifa \
-    libjpega \
-    ip6tables \
-    iptables \
-    e2fsck \
-    blkid \
-    libhyphenation \
-    libwebcore \
-    core-junit \
-    libkeyutils \
-    brctl \
-    ethertypes \
-    ebtables
-
+    
 $(call inherit-product-if-exists, vendor/samsung/fortuna3g/device_fortuna3g.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
