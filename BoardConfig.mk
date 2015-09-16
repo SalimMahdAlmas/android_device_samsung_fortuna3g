@@ -65,7 +65,7 @@ BOARD_RAMDISK_OFFSET     			:= 0x02000000
 TARGET_KERNEL_SOURCE 				:= kernel/samsung/fortuna
 BOARD_FLASH_BLOCK_SIZE 				:= 131072
 TARGET_KERNEL_CONFIG 				:= msm8916_sec_defconfig
-
+TARGET_KERNEL_SELINUX_CONFIG 			:= selinux_defconfig
 
 # SD
 TARGET_USE_CUSTOM_LUN_FILE_PATH 		:= /sys/devices/platform/msm_hsusb/gadget/lun%d/file
