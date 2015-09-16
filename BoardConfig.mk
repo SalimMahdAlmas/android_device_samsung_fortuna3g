@@ -55,7 +55,8 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS 		:= true
 TARGET_QCOM_MEDIA_VARIANT 			:= caf-new
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK 			:= $(LOCAL_PATH)/mkbootimg.mk
+#BOARD_CUSTOM_BOOTIMG_MK 			:= $(LOCAL_PATH)/mkbootimg.mk
+BOARD_MKBOOTIMG_ARGS 				:= --ramdisk_offset BOARD_RAMDISK_OFFSET --tags_offset BOARD_KERNEL_TAGS_OFFSET
 BOARD_KERNEL_BASE 				:= 0x80000000
 BOARD_KERNEL_CMDLINE 				:= console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci
 BOARD_KERNEL_PAGESIZE 				:= 2048
