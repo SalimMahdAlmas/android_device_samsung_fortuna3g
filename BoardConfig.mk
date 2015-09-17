@@ -92,7 +92,7 @@ BOARD_CHARGER_SHOW_PERCENTAGE 			:= true
 BOARD_SEPOLICY_DIRS += \
         device/samsung/fortuna3g/sepolicy
         
-BOARD_SEPOLICY_UNION += \ 
-	genfs_contexts \ 
-	file_contexts \ 
+BOARD_SEPOLICY_UNION += \
+	genfs_contexts \
+	file_contexts \
 	sepolicy.te
