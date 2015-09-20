@@ -96,3 +96,5 @@ BOARD_SEPOLICY_UNION += \
 	genfs_contexts \
 	file_contexts \
 	sepolicy.te
+#Camera
+USE_CAMERA_STUB := true
