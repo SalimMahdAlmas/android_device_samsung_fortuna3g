@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=samsung
-DEVICE=fortuna
+DEVICE=fortuna3g
 
 
 export VENDOR
