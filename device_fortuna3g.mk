@@ -59,6 +59,12 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/fstab.qcom:root/fstab.qcom
+    
+    
+# Boot animation
+TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 540
+
 
 # For userdebug builds
 ADDITIONAL_DEFAULT_PROPERTIES += \
