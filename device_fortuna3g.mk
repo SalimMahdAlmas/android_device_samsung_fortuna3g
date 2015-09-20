@@ -59,12 +59,6 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/fstab.qcom:root/fstab.qcom
-    
-    
-# Boot animation
-TARGET_SCREEN_HEIGHT := 960
-TARGET_SCREEN_WIDTH := 540
-
 
 # For userdebug builds
 ADDITIONAL_DEFAULT_PROPERTIES += \
@@ -74,8 +68,20 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.multisim.simslotcount=2 \
     persist.radio.multisim.config=dsds \
     persist.service.adb.enable=1
-    
-$(call inherit-product-if-exists, vendor/samsung/fortuna3g/device_fortuna3g.mk)
+
+# Display
+PRODUCT_PACKAGES += \
+    copybit.msm8916 \
+    gralloc.msm8916 \
+    hwcomposer.msm8916 \
+    libtinyxml \
+    memtrack.msm8916
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 540
+
+$(call inherit-product-if-exists, vendor/samsung/fortuna3g/fortuna-common-vendor.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
