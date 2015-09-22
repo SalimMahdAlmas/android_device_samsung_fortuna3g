@@ -97,5 +97,9 @@ BOARD_SEPOLICY_UNION += \
 	genfs_contexts \
 	file_contexts \
 	sepolicy.te
+	
+# RIL
+BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
+
 #Camera
 USE_CAMERA_STUB := true
