@@ -20,6 +20,9 @@ LOCAL_PATH 					:= device/samsung/fortuna3g
 # Inherit from samsung qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk 
 
+# inherit from the proprietary version
+-include vendor/samsung/fortuna3g/BoardConfigVendor.mk
+
 # Partition
 BOARD_BOOTIMAGE_PARTITION_SIZE 			:= 13631488
 BOARD_RECOVERYIMAGE_PARTITION_SIZE 		:= 15728640
@@ -102,7 +105,13 @@ BOARD_SEPOLICY_UNION += \
 	sepolicy.te
 
 # RIL
-BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/
+BOARD_RIL_CLASS 				:= ../../../$(LOCAL_PATH)/ril/
 
 #Camera
-USE_CAMERA_STUB := true
+USE_CAMERA_STUB 				:= true
+
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR 	:= $(DEVICE_PATH)/bluetooth
+BOARD_HAVE_BLUETOOTH 				:= true
+BOARD_HAVE_BLUETOOTH_QCOM 			:= true
+BLUETOOTH_HCI_USE_MCT 				:= true
