@@ -57,8 +57,12 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 # Ramdisk
+
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/fstab.qcom:root/fstab.qcom
+    $(LOCAL_PATH)/recovery/fstab.qcom:root/fstab.qcom \
+    $(LOCAL_PATH)/recovery/init.qcom.rc:root/init.qcom.rc \
+    $(LOCAL_PATH)/recovery/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    $(LOCAL_PATH)/recovery/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 # For userdebug builds
 ADDITIONAL_DEFAULT_PROPERTIES += \
@@ -75,7 +79,9 @@ PRODUCT_PACKAGES += \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
     libtinyxml \
-    memtrack.msm8916
+    memtrack.msm8916 \
+    $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 960
