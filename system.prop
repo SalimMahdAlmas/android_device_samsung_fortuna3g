@@ -17,3 +17,7 @@ persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 ro.telephony.ril_class=FortunaRIL
+
+# USB
+persist.sys.usb.config=mtp,adb
+ro.sys.usb.default.config=mtp
