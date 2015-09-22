@@ -8,3 +8,4 @@ Bootable CM11 but lots of FC
 
 Credits
 - K_TECH
+- Ramsudharsan Madhavan
