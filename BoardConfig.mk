@@ -69,10 +69,18 @@ TARGET_KERNEL_CONFIG 				:= msm8916_sec_defconfig
 TARGET_KERNEL_SELINUX_CONFIG 			:= selinux_defconfig
 TARGET_KERNEL_TIMA_CONFIG 			:= tima8916_defconfig
 TARGET_KERNEL_VARIANT_CONFIG 			:= msm8916_sec_fortunave3g_eur_defconfig
+
 # SD
 TARGET_USE_CUSTOM_LUN_FILE_PATH 		:= /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR 		:= true
 BOARD_SUPPRESS_EMMC_WIPE 			:= true
+
+# Vold
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
+BOARD_VOLD_MAX_PARTITIONS := 28
+
 
 # Audio
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY 		:= true
