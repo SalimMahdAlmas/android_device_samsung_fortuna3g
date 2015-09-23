@@ -19,4 +19,4 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/full_fortuna3g.mk \
-    $(LOCAL_DIR)/cm_fortuna3g.mk
+    $(LOCAL_DIR)/device.mk
