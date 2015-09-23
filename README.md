@@ -7,5 +7,5 @@ Current ETA's
 Bootable CM11 but lots of FC
 
 Credits
-- K_TECH
+- Khusika Dhamar Gusti
 - Ramsudharsan Madhavan
