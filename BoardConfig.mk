@@ -117,6 +117,9 @@ BOARD_SEPOLICY_UNION += \
 # RIL
 BOARD_RIL_CLASS 				:= ../../../$(LOCAL_PATH)/ril/
 
+# OTA override
+TARGET_OTA_ASSERT_DEVICE			:= fortuna3g,SM-G530H,SM-G530F,G530FZ,SM-G530AZ
+
 #Camera
 USE_CAMERA_STUB 				:= true
 
