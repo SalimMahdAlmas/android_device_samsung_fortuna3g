@@ -78,7 +78,6 @@ BOARD_VOLD_MAX_PARTITIONS 			:= 28
 # Audio
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY 		:= true
 BOARD_USES_ALSA_AUDIO 				:= true
-BOARD_USES_ALSA_AUDIO := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB 				:= $(LOCAL_PATH)/recovery/fstab.qcom
@@ -99,15 +98,6 @@ BOARD_CACHEIMAGE_PARTITION_SIZE 		:= 314572800 # 307200*1024
 BOARD_USERDATAIMAGE_PARTITION_SIZE 		:= 5731495936 # 5597164*1024
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE 		:= ext4
 
-#SE Policy
-BOARD_SEPOLICY_DIRS += \
-        device/samsung/fortuna3g/sepolicy
-        
-BOARD_SEPOLICY_UNION += \
-	genfs_contexts \
-	file_contexts \
-	sepolicy.te
-
 # RIL
 BOARD_RIL_CLASS 				:= ../../../$(LOCAL_PATH)/ril/
 
@@ -125,3 +115,12 @@ BLUETOOTH_HCI_USE_MCT 				:= true
 
 # QCOM RTC
 BOARD_USES_QC_TIME_SERVICES 			:= true
+
+#SE Policy
+BOARD_SEPOLICY_DIRS += \
+        device/samsung/fortuna3g/sepolicy
+        
+BOARD_SEPOLICY_UNION += \
+	genfs_contexts \
+	file_contexts \
+	sepolicy.te
