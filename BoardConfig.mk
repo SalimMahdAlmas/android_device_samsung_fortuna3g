@@ -42,7 +42,6 @@ TARGET_CPU_ABI2 				:= armeabi
 ARCH_ARM_HAVE_NEON				:= true
 ARCH_ARM_HAVE_VFP 				:= true
 ARCH_ARM_HAVE_TLS_REGISTER 			:= true
-
 WITH_DEXPREOPT 					:= true
 
 # Power
@@ -116,7 +115,9 @@ BLUETOOTH_HCI_USE_MCT 				:= true
 # QCOM RTC
 BOARD_USES_QC_TIME_SERVICES 			:= true
 
-#SE Policy
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+
 BOARD_SEPOLICY_DIRS += \
         device/samsung/fortuna3g/sepolicy
         
