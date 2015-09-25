@@ -116,7 +116,7 @@ BLUETOOTH_HCI_USE_MCT 				:= true
 BOARD_USES_QC_TIME_SERVICES 			:= true
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+include device/samsung/fortuna3g/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
         device/samsung/fortuna3g/sepolicy
