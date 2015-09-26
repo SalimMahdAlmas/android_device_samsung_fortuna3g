@@ -34,8 +34,8 @@ on early-init
     symlink /data/tombstones /tombstones
 
 # import cne init file
-#on post-fs
-#    export LD_PRELOAD /vendor/lib/libNimsWrap.so
+on post-fs
+    export LD_PRELOAD /vendor/lib/libNimsWrap.so
 
 on fs
     mount_all fstab.qcom
