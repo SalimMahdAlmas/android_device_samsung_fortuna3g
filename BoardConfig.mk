@@ -116,8 +116,6 @@ BLUETOOTH_HCI_USE_MCT 				:= true
 BOARD_USES_QC_TIME_SERVICES 			:= true
 
 # SELinux
-include device/samsung/fortuna3g/sepolicy/sepolicy.mk
-
 BOARD_SEPOLICY_DIRS += \
         device/samsung/fortuna3g/sepolicy
         
@@ -125,3 +123,5 @@ BOARD_SEPOLICY_UNION += \
 	genfs_contexts \
 	file_contexts \
 	sepolicy.te
+	
+TARGET_LDPRELOAD := libNimsWrap.so
