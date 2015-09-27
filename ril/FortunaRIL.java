@@ -37,7 +37,7 @@ import com.android.internal.telephony.cdma.CdmaInformationRecords;
 
 import java.util.ArrayList;
 
-public class AscendP7RIL extends RIL implements CommandsInterface {
+public class FortunaRIL extends RIL implements CommandsInterface {
     boolean RILJ_LOGV = true;
     boolean RILJ_LOGD = true;
 	
@@ -54,7 +54,7 @@ public class AscendP7RIL extends RIL implements CommandsInterface {
     static final int RADIO_ON = 10;
     static final int SUB_TO_ACTIVATE = 11;
 	
-    public AscendP7RIL(Context context, int networkMode, int cdmaSubscription) {
+    public FortunaRIL(Context context, int networkMode, int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
     }
     @Override
