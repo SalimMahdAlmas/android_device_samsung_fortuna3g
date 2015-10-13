@@ -22,4 +22,4 @@
 #
 # 
 
-add_lunch_combo fortuna3g-userdebug
+add_lunch_combo tesla_fortuna3g-userdebug
