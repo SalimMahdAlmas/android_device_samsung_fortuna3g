@@ -7,7 +7,7 @@ $(call inherit-product, $(LOCAL_PATH)/full_fortuna3g.mk)
 PRODUCT_RELEASE_NAME := fortuna3g
 
 # Setup device configuration
-PRODUCT_NAME := cm_fortuna3g
+PRODUCT_NAME := tesla_fortuna3g
 PRODUCT_DEVICE := fortuna3g
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
