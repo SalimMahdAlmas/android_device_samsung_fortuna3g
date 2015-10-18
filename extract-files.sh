@@ -3,9 +3,6 @@
 VENDOR=samsung
 DEVICE=fortuna3g
 
-
-export VENDOR
-export DEVICE
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 
 echo "Pulling device files..."
@@ -16,4 +13,5 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
     fi
     adb pull /system/$FILE $BASE/$FILE
 done
-on
+
+./setup-makefiles.sh
